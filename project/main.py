@@ -64,8 +64,9 @@ while win != True:
                     print_board(player1_row, player1_col, player2_row, player2_col)
                     print("Game Over,Player1 is the winner")
                     break
-                elif(player1_steps == player2_steps):
+                elif(player1_steps == player2_steps and player2_steps != 0):
                     player2_steps = 0
+                    print("Oops, player2 rolls back")
                     print("The current player2 steps is",player2_steps)
                 elif(player1_steps > 8 ):
                     player1_steps-=dice_number
@@ -94,8 +95,9 @@ while win != True:
                     print_board(player1_row, player1_col, player2_row, player2_col)
                     print("Game Over,Player2 is the winner")
                     break
-                elif(player2_steps == player1_steps):
+                elif(player2_steps == player1_steps and player1_steps != 0):
                     player1_steps = 0
+                    print("Oops, player1 rolls back")
                     print("The current player1 steps is",player1_steps)
                 elif(player2_steps > 8 ):
                     player2_steps-=dice_number
